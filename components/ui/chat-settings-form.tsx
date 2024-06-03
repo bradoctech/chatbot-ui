@@ -40,7 +40,7 @@ export const ChatSettingsForm: FC<ChatSettingsFormProps> = ({
   return (
     <div className="space-y-3">
       <div className="space-y-1">
-        <Label>Model</Label>
+        <Label>Modelo</Label>
 
         <ModelSelect
           selectedModelId={chatSettings.model}
@@ -119,7 +119,7 @@ const AdvancedContent: FC<AdvancedContentProps> = ({
     <div className="mt-5">
       <div className="space-y-3">
         <Label className="flex items-center space-x-1">
-          <div>Temperature:</div>
+          <div>Temperatura:</div>
 
           <div>{chatSettings.temperature}</div>
         </Label>
@@ -140,7 +140,7 @@ const AdvancedContent: FC<AdvancedContentProps> = ({
 
       <div className="mt-6 space-y-3">
         <Label className="flex items-center space-x-1">
-          <div>Context Length:</div>
+          <div>Tamanho do Contexto:</div>
 
           <div>{chatSettings.contextLength}</div>
         </Label>
@@ -175,14 +175,14 @@ const AdvancedContent: FC<AdvancedContentProps> = ({
           }
         />
 
-        <Label>Chats Include Profile Context</Label>
+        <Label>Conversas incluem o contexto do perfil do usuario</Label>
 
         {showTooltip && (
           <WithTooltip
             delayDuration={0}
             display={
               <div className="w-[400px] p-3">
-                {profile?.profile_context || "No profile context."}
+                {profile?.profile_context || "Sem contexto no perfil."}
               </div>
             }
             trigger={
@@ -203,7 +203,7 @@ const AdvancedContent: FC<AdvancedContentProps> = ({
           }
         />
 
-        <Label>Chats Include Workspace Instructions</Label>
+        <Label>Conversas incluem as instruções da Área de Trabalho</Label>
 
         {showTooltip && (
           <WithTooltip
@@ -211,7 +211,7 @@ const AdvancedContent: FC<AdvancedContentProps> = ({
             display={
               <div className="w-[400px] p-3">
                 {selectedWorkspace?.instructions ||
-                  "No workspace instructions."}
+                  "Sem instruções na área de trabalho."}
               </div>
             }
             trigger={
@@ -222,7 +222,7 @@ const AdvancedContent: FC<AdvancedContentProps> = ({
       </div>
 
       <div className="mt-5">
-        <Label>Embeddings Provider</Label>
+        <Label>Provedor de Embeddings</Label>
 
         <Select
           value={chatSettings.embeddingsProvider}

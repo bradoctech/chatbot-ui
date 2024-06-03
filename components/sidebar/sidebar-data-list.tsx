@@ -74,20 +74,6 @@ export const SidebarDataList: FC<SidebarDataListProps> = ({
           />
         )
 
-      case "assistants":
-        return (
-          <AssistantItem
-            key={item.id}
-            assistant={item as Tables<"assistants">}
-          />
-        )
-
-      case "tools":
-        return <ToolItem key={item.id} tool={item as Tables<"tools">} />
-
-      case "models":
-        return <ModelItem key={item.id} model={item as Tables<"models">} />
-
       default:
         return null
     }
@@ -227,7 +213,7 @@ export const SidebarDataList: FC<SidebarDataListProps> = ({
         {data.length === 0 && (
           <div className="flex grow flex-col items-center justify-center">
             <div className=" text-centertext-muted-foreground p-8 text-lg italic">
-              No {contentType}.
+              Sem {contentType}
             </div>
           </div>
         )}

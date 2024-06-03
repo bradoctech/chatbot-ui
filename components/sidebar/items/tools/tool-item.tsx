@@ -39,7 +39,7 @@ export const ToolItem: FC<ToolItemProps> = ({ tool }) => {
       renderInputs={() => (
         <>
           <div className="space-y-1">
-            <Label>Name</Label>
+            <Label>Nome</Label>
 
             <Input
               placeholder="Tool name..."
@@ -50,7 +50,7 @@ export const ToolItem: FC<ToolItemProps> = ({ tool }) => {
           </div>
 
           <div className="space-y-1">
-            <Label>Description</Label>
+            <Label>Descrição</Label>
 
             <Input
               placeholder="Tool description..."

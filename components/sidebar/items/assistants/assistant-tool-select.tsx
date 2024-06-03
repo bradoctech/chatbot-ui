@@ -64,7 +64,7 @@ export const AssistantToolSelect: FC<AssistantToolSelectProps> = ({
         >
           <div className="flex items-center">
             <div className="ml-2 flex items-center">
-              {selectedAssistantTools.length} tools selected
+              {selectedAssistantTools.length} ferramentas selecionadas
             </div>
           </div>
 

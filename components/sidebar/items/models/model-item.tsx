@@ -39,7 +39,7 @@ export const ModelItem: FC<ModelItemProps> = ({ model }) => {
       renderInputs={() => (
         <>
           <div className="space-y-1">
-            <Label>Name</Label>
+            <Label>Nome</Label>
 
             <Input
               placeholder="Model name..."

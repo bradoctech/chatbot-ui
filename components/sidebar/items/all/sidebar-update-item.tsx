@@ -600,9 +600,9 @@ export const SidebarUpdateItem: FC<SidebarUpdateItemProps> = ({
 
       setIsOpen(false)
 
-      toast.success(`${contentType.slice(0, -1)} updated successfully`)
+      toast.success(`${contentType.slice(0, -1)} atualizado com sucesso.`)
     } catch (error) {
-      toast.error(`Error updating ${contentType.slice(0, -1)}. ${error}`)
+      toast.error(`Erro atualizando ${contentType.slice(0, -1)}. ${error}`)
     }
   }
 
@@ -641,14 +641,14 @@ export const SidebarUpdateItem: FC<SidebarUpdateItemProps> = ({
         <div className="grow overflow-auto">
           <SheetHeader>
             <SheetTitle className="text-2xl font-bold">
-              Edit {contentType.slice(0, -1)}
+              Editar {contentType.slice(0, -1)}
             </SheetTitle>
           </SheetHeader>
 
           <div className="mt-4 space-y-3">
             {workspaces.length > 1 && (
               <div className="space-y-1">
-                <Label>Assigned Workspaces</Label>
+                <Label>Area de Trabalho </Label>
 
                 <AssignWorkspaces
                   selectedWorkspaces={selectedWorkspaces}
@@ -666,11 +666,11 @@ export const SidebarUpdateItem: FC<SidebarUpdateItemProps> = ({
 
           <div className="flex grow justify-end space-x-2">
             <Button variant="outline" onClick={() => setIsOpen(false)}>
-              Cancel
+              Cancelar
             </Button>
 
             <Button ref={buttonRef} onClick={handleUpdate}>
-              Save
+              Salvar
             </Button>
           </div>
         </SheetFooter>

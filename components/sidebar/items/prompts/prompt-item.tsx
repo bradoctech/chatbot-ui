@@ -25,7 +25,7 @@ export const PromptItem: FC<PromptItemProps> = ({ prompt }) => {
       renderInputs={() => (
         <>
           <div className="space-y-1">
-            <Label>Name</Label>
+            <Label>Nome</Label>
 
             <Input
               placeholder="Prompt name..."

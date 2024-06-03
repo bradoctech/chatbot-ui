@@ -27,7 +27,7 @@ export const ChangePassword: FC<ChangePasswordProps> = () => {
 
     await supabase.auth.updateUser({ password: newPassword })
 
-    toast.success("Password changed successfully.")
+    toast.success("Senha atualizada com sucesso.")
 
     return router.push("/login")
   }
@@ -36,12 +36,12 @@ export const ChangePassword: FC<ChangePasswordProps> = () => {
     <Dialog open={true}>
       <DialogContent className="h-[240px] w-[400px] p-4">
         <DialogHeader>
-          <DialogTitle>Change Password</DialogTitle>
+          <DialogTitle>Mudar senha</DialogTitle>
         </DialogHeader>
 
         <Input
           id="password"
-          placeholder="New Password"
+          placeholder="Nova senha"
           type="password"
           value={newPassword}
           onChange={e => setNewPassword(e.target.value)}
@@ -49,7 +49,7 @@ export const ChangePassword: FC<ChangePasswordProps> = () => {
 
         <Input
           id="confirmPassword"
-          placeholder="Confirm New Password"
+          placeholder="Confirmar a nova senha"
           type="password"
           value={confirmPassword}
           onChange={e => setConfirmPassword(e.target.value)}

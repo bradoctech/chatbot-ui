@@ -225,11 +225,9 @@ export const Import: FC<ImportProps> = ({}) => {
             onKeyDown={handleKeyDown}
           >
             <DialogHeader>
-              <div className="text-2xl font-bold">Import Data</div>
+              <div className="text-2xl font-bold">Importar Dados</div>
 
-              <DialogDescription>
-                Import data from a JSON file(s).
-              </DialogDescription>
+              <DialogDescription>Importa os dados de um JSON</DialogDescription>
             </DialogHeader>
 
             <div className="max-w-[560px] space-y-4">
@@ -273,7 +271,7 @@ export const Import: FC<ImportProps> = ({}) => {
 
             <DialogFooter>
               <Button variant="ghost" onClick={handleCancel}>
-                Cancel
+                Cancelar
               </Button>
 
               <Button
@@ -281,7 +279,7 @@ export const Import: FC<ImportProps> = ({}) => {
                 onClick={handleSaveData}
                 disabled={importList.length === 0}
               >
-                Save Data
+                Salvar Dados
               </Button>
             </DialogFooter>
           </DialogContent>

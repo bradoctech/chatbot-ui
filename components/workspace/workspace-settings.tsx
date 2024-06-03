@@ -168,7 +168,7 @@ export const WorkspaceSettings: FC<WorkspaceSettingsProps> = ({}) => {
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger asChild>
         <WithTooltip
-          display={<div>Workspace Settings</div>}
+          display={<div>Configurações da Área de Trabalho</div>}
           trigger={
             <IconSettings
               className="ml-3 cursor-pointer pr-[5px] hover:opacity-50"
@@ -187,37 +187,37 @@ export const WorkspaceSettings: FC<WorkspaceSettingsProps> = ({}) => {
         <div className="grow overflow-auto">
           <SheetHeader>
             <SheetTitle className="flex items-center justify-between">
-              Workspace Settings
+              Configurações da Área de Trabalho
               {selectedWorkspace?.is_home && <IconHome />}
             </SheetTitle>
 
             {selectedWorkspace?.is_home && (
               <div className="text-sm font-light">
-                This is your home workspace for personal use.
+                Essa é sua área de trabalho pessoal.
               </div>
             )}
           </SheetHeader>
 
           <Tabs defaultValue="main">
             <TabsList className="mt-4 grid w-full grid-cols-2">
-              <TabsTrigger value="main">Main</TabsTrigger>
+              <TabsTrigger value="main">Principal</TabsTrigger>
               <TabsTrigger value="defaults">Defaults</TabsTrigger>
             </TabsList>
 
             <TabsContent className="mt-4 space-y-4" value="main">
               <>
                 <div className="space-y-1">
-                  <Label>Workspace Name</Label>
+                  <Label>Nome da Área de Trabalho</Label>
 
                   <Input
-                    placeholder="Name..."
+                    placeholder="Nome..."
                     value={name}
                     onChange={e => setName(e.target.value)}
                   />
                 </div>
 
                 {/* <div className="space-y-1">
-                  <Label>Description</Label>
+                  <Label>Descrição</Label>
 
                   <Input
                     placeholder="Description... (optional)"
@@ -227,7 +227,7 @@ export const WorkspaceSettings: FC<WorkspaceSettingsProps> = ({}) => {
                 </div> */}
 
                 <div className="space-y-1">
-                  <Label>Workspace Image</Label>
+                  <Label>Imagem da Área de Trabalho</Label>
 
                   <ImagePicker
                     src={imageLink}
@@ -242,11 +242,12 @@ export const WorkspaceSettings: FC<WorkspaceSettingsProps> = ({}) => {
 
               <div className="space-y-1">
                 <Label>
-                  How would you like the AI to respond in this workspace?
+                  Como você gostaria que a IA respondesse nessa área de
+                  trabalho?
                 </Label>
 
                 <TextareaAutosize
-                  placeholder="Instructions... (optional)"
+                  placeholder="Instruções... (opcional)"
                   value={instructions}
                   onValueChange={setInstructions}
                   minRows={5}
@@ -263,7 +264,7 @@ export const WorkspaceSettings: FC<WorkspaceSettingsProps> = ({}) => {
 
             <TabsContent className="mt-5" value="defaults">
               <div className="mb-4 text-sm">
-                These are the settings your workspace begins with when selected.
+                Essas são as Configurações que sua área de trabalho começara.
               </div>
 
               <ChatSettingsForm
@@ -286,11 +287,11 @@ export const WorkspaceSettings: FC<WorkspaceSettingsProps> = ({}) => {
 
           <div className="space-x-2">
             <Button variant="ghost" onClick={() => setIsOpen(false)}>
-              Cancel
+              Cancelar
             </Button>
 
             <Button ref={buttonRef} onClick={handleSave}>
-              Save
+              Salvar
             </Button>
           </div>
         </div>

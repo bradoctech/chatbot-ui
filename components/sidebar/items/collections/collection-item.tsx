@@ -89,7 +89,7 @@ export const CollectionItem: FC<CollectionItemProps> = ({ collection }) => {
             </div>
 
             <div className="space-y-1">
-              <Label>Name</Label>
+              <Label>Nome</Label>
 
               <Input
                 placeholder="Collection name..."
@@ -100,7 +100,7 @@ export const CollectionItem: FC<CollectionItemProps> = ({ collection }) => {
             </div>
 
             <div className="space-y-1">
-              <Label>Description</Label>
+              <Label>Descrição</Label>
 
               <Input
                 placeholder="Collection description..."

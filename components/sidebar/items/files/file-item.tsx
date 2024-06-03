@@ -46,7 +46,7 @@ export const FileItem: FC<FileItemProps> = ({ file }) => {
           </div>
 
           <div className="space-y-1">
-            <Label>Name</Label>
+            <Label>Nome</Label>
 
             <Input
               placeholder="File name..."
@@ -57,7 +57,7 @@ export const FileItem: FC<FileItemProps> = ({ file }) => {
           </div>
 
           <div className="space-y-1">
-            <Label>Description</Label>
+            <Label>Descrição</Label>
 
             <Input
               placeholder="File description..."

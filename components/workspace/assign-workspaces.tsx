@@ -61,7 +61,7 @@ export const AssignWorkspaces: FC<AssignWorkspaces> = ({
         >
           <div className="flex items-center">
             <div className="ml-2 flex items-center">
-              {selectedWorkspaces.length} workspaces selected
+              {selectedWorkspaces.length} áreas de trabalho selecionadas
             </div>
           </div>
 
@@ -76,7 +76,7 @@ export const AssignWorkspaces: FC<AssignWorkspaces> = ({
       >
         <Input
           ref={inputRef}
-          placeholder="Search workspaces..."
+          placeholder="Buscando áreas de trabalho..."
           value={search}
           onChange={e => setSearch(e.target.value)}
           onKeyDown={e => e.stopPropagation()}
@@ -136,7 +136,7 @@ const WorkspaceItem: FC<WorkspaceItemProps> = ({
 }) => {
   const handleSelect = () => {
     if (selected && selectedWorkspaces.length === 1) {
-      toast.info("You must select at least one workspace")
+      toast.info("Voce deve selecionar pelo menos 1 área de trabalho.")
       return
     }
 

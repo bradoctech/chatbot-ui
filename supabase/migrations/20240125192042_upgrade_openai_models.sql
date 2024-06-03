@@ -50,7 +50,7 @@ WHERE model = 'gpt-3.5-turbo-1106';
 
 -- PROFILES
 
-CREATE OR REPLACE FUNCTION create_profile_and_workspace() 
+CREATE OR REPLACE FUNCTION create_profile_and_workspace()
 RETURNS TRIGGER
 LANGUAGE plpgsql
 SECURITY DEFINER
@@ -93,7 +93,7 @@ BEGIN
         TRUE,
         'Home',
         4096,
-        'gpt-4-turbo-preview', -- Updated default model
+        'gpt-4o', -- Updated default model
         'You are a friendly, helpful AI assistant.',
         0.5,
         'My home workspace.',

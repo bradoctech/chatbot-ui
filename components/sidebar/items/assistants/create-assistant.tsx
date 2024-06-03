@@ -136,10 +136,10 @@ export const CreateAssistant: FC<CreateAssistantProps> = ({
       renderInputs={() => (
         <>
           <div className="space-y-1">
-            <Label>Name</Label>
+            <Label>Nome</Label>
 
             <Input
-              placeholder="Assistant name..."
+              placeholder="Nome do assistente..."
               value={name}
               onChange={e => setName(e.target.value)}
               maxLength={ASSISTANT_NAME_MAX}
@@ -147,10 +147,10 @@ export const CreateAssistant: FC<CreateAssistantProps> = ({
           </div>
 
           <div className="space-y-1 pt-2">
-            <Label>Description</Label>
+            <Label>Descrição</Label>
 
             <Input
-              placeholder="Assistant description..."
+              placeholder="Descrição do assistente..."
               value={description}
               onChange={e => setDescription(e.target.value)}
               maxLength={ASSISTANT_DESCRIPTION_MAX}
@@ -159,9 +159,9 @@ export const CreateAssistant: FC<CreateAssistantProps> = ({
 
           <div className="space-y-1 pt-2">
             <Label className="flex space-x-1">
-              <div>Image</div>
+              <div>Imagem</div>
 
-              <div className="text-xs">(optional)</div>
+              <div className="text-xs">(opcional)</div>
             </Label>
 
             <ImagePicker
@@ -181,7 +181,7 @@ export const CreateAssistant: FC<CreateAssistantProps> = ({
           />
 
           <div className="space-y-1 pt-2">
-            <Label>Files & Collections</Label>
+            <Label>Arquivos e Coleções</Label>
 
             <AssistantRetrievalSelect
               selectedAssistantRetrievalItems={selectedAssistantRetrievalItems}
@@ -200,7 +200,7 @@ export const CreateAssistant: FC<CreateAssistantProps> = ({
             </div>
           ) : (
             <div className="pt-1 font-semibold">
-              Model is not compatible with tools.
+              Modelo não é compativel com as ferramentas.
             </div>
           )}
         </>
