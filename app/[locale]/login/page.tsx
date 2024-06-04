@@ -136,6 +136,8 @@ export default async function Login({
       return redirect(`/login?message=${error.message}`)
     }
 
+    const { data } = await supabase.auth.getUser()
+
     const { data: homeWorkspace, error: homeWorkspaceError } = await supabase
       .from("workspaces")
       .select("*")
