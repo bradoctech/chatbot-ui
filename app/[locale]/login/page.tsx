@@ -136,25 +136,10 @@ export default async function Login({
       return redirect(`/login?message=${error.message}`)
     }
 
-    const { data } = await supabase.auth.getUser()
-
-    const { data: homeWorkspace, error: homeWorkspaceError } = await supabase
-      .from("workspaces")
-      .select("*")
-      .eq("user_id", data.user!.id)
-      .eq("is_home", true)
-      .single()
-
-    if (!homeWorkspace) {
-      throw new Error(
-        homeWorkspaceError?.message || "An unexpected error occurred"
-      )
-    }
-
-    return redirect(`/${homeWorkspace.id}/chat`)
-
     // USE IF YOU WANT TO SEND EMAIL VERIFICATION, ALSO CHANGE TOML FILE
-    // return redirect("/login?message=Check email to continue sign in process")
+    return redirect(
+      "/login?message=Olhe o seu e-mail para continuar com o processo de cadastro."
+    )
   }
 
   const handleResetPassword = async (formData: FormData) => {
