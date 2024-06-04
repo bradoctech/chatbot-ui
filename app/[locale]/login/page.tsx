@@ -141,7 +141,7 @@ export default async function Login({
     const { data: homeWorkspace, error: homeWorkspaceError } = await supabase
       .from("workspaces")
       .select("*")
-      .eq("user_id", data.user.id)
+      .eq("user_id", data.user!.id)
       .eq("is_home", true)
       .single()
 
