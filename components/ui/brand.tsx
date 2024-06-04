@@ -3,12 +3,17 @@
 import Link from "next/link"
 import { FC } from "react"
 import Image from "next/image"
+import { useTheme } from "next-themes"
 
 interface BrandProps {
   theme?: "dark" | "light"
 }
 
-export const Brand: FC<BrandProps> = ({ theme = "dark" }) => {
+export const Brand: FC<BrandProps> = () => {
+  "use client"
+
+  const { theme } = useTheme()
+
   return (
     <Link
       className="flex cursor-pointer flex-col items-center hover:opacity-50"
