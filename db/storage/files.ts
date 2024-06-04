@@ -38,7 +38,7 @@ export const deleteFileFromStorage = async (filePath: string) => {
   const { error } = await supabase.storage.from("files").remove([filePath])
 
   if (error) {
-    toast.error("Failed to remove file!")
+    toast.error("Erro ao remover arquivo.")
     return
   }
 }

@@ -153,7 +153,7 @@ export const WorkspaceSettings: FC<WorkspaceSettingsProps> = ({}) => {
       })
     })
 
-    toast.success("Workspace updated!")
+    toast.success("Area de Trabalho atualizada.")
   }
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {

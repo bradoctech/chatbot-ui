@@ -162,7 +162,7 @@ export const ProfileSettings: FC<ProfileSettingsProps> = ({}) => {
 
     setProfile(updatedProfile)
 
-    toast.success("Profile updated!")
+    toast.success("Perfil atualizado com sucesso.")
 
     const providers = [
       "openai",
@@ -259,7 +259,7 @@ export const ProfileSettings: FC<ProfileSettingsProps> = ({}) => {
       if (!usernameRegex.test(username)) {
         setUsernameAvailable(false)
         toast.error(
-          "Username must be letters, numbers, or underscores only - no other characters or spacing allowed."
+          "O usuario deve ter apenas letras, numeros ou underscore - nenhum outro caracter ou espaço é aceito."
         )
         return
       }
